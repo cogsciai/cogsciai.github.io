@@ -6,7 +6,8 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   overflow: hidden;
 }
@@ -79,6 +80,14 @@ header nav {
   margin-top: 20px;
   overflow: hidden;
   height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent-updates h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #002147;
 }
 
 .news-container {
@@ -90,7 +99,7 @@ header nav {
 .news-item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 @keyframes scroll-up {
