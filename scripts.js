@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function scrollNews() {
     const firstItem = newsContainer.firstElementChild;
     const itemHeight = firstItem.offsetHeight;
-    newsContainer.style.transition = 'transform 15s';
+    newsContainer.style.transition = 'transform 30s';
     newsContainer.style.transform = `translateY(-${itemHeight}px)`;
 
     setTimeout(() => {
