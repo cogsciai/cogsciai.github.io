@@ -17,5 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     slideIndex = (slideIndex + 1) % slides.length;
   }
 
+  function scrollNews() {
+    const firstItem = newsContainer.firstElementChild;
+    newsContainer.appendChild(firstItem);
+    newsContainer.style.transition = 'none';
+    newsContainer.style.transform = 'translateY(-100%)';
+    setTimeout(() => {
+      newsContainer.style.transition = 'transform 2s';
+      newsContainer.style.transform = 'translateY(0)';
+    }, 20);
+  }
+
   setInterval(showSlide, 3000);
+  setInterval(scrollNews, 4000); // Adjust the interval as needed
 });
