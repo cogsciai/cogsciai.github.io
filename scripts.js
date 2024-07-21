@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     newsContainer.style.transition = 'none';
     newsContainer.style.transform = 'translateY(-100%)';
     setTimeout(() => {
-      newsContainer.style.transition = 'transform 2s';
+      newsContainer.style.transition = 'transform 5s';
       newsContainer.style.transform = 'translateY(0)';
     }, 20);
   }
