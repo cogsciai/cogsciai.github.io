@@ -71,18 +71,20 @@ header nav {
   display: block;
 }
 
-.news {
+.recent-updates {
   width: 30%;
   float: right;
   background: #fff;
   padding: 20px;
   margin-top: 20px;
-  overflow-y: auto;
+  overflow: hidden;
   height: 400px;
 }
 
-.news h2 {
-  margin-top: 0;
+.news-container {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 10s linear infinite;
 }
 
 .news-item {
@@ -91,14 +93,13 @@ header nav {
   margin-bottom: 10px;
 }
 
-.news-item img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-
-.news-item p {
-  margin: 0;
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .about-us {
