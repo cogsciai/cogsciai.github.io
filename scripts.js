@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   let slideIndex = 0;
   const slides = document.querySelectorAll('.slides img');
-  const newsItems = document.querySelectorAll('.news-item');
-  const newsContainer = document.querySelector('.news');
+  const newsContainer = document.querySelector('.news-container');
+  const newsItems = Array.from(document.querySelectorAll('.news-item'));
+  
+  // Duplicate news items for continuous scroll
+  newsItems.forEach(item => newsContainer.appendChild(item.cloneNode(true)));
 
   function showSlide() {
     slides.forEach((slide, index) => {
@@ -14,20 +17,5 @@ document.addEventListener('DOMContentLoaded', function() {
     slideIndex = (slideIndex + 1) % slides.length;
   }
 
-  function autoScrollNews() {
-    let scrollAmount = 0;
-    const newsHeight = newsContainer.scrollHeight;
-    const containerHeight = newsContainer.clientHeight;
-
-    setInterval(() => {
-      scrollAmount += 2;
-      if (scrollAmount >= (newsHeight - containerHeight)) {
-        scrollAmount = 0;
-      }
-      newsContainer.scrollTop = scrollAmount;
-    }, 100);
-  }
-
   setInterval(showSlide, 3000);
-  autoScrollNews();
 });
