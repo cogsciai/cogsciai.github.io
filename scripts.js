@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.slides img');
   const newsContainer = document.querySelector('.news-container');
   const newsItems = Array.from(document.querySelectorAll('.news-item'));
-  
-  // Duplicate news items for continuous scroll
+
+  // Clone news items to create a seamless scroll
   newsItems.forEach(item => newsContainer.appendChild(item.cloneNode(true)));
 
   function showSlide() {
@@ -19,13 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function scrollNews() {
     const firstItem = newsContainer.firstElementChild;
-    newsContainer.appendChild(firstItem);
-    newsContainer.style.transition = 'none';
-    newsContainer.style.transform = 'translateY(-100%)';
+    const itemHeight = firstItem.offsetHeight;
+    newsContainer.style.transition = 'transform 15s';
+    newsContainer.style.transform = `translateY(-${itemHeight}px)`;
+
     setTimeout(() => {
-      newsContainer.style.transition = 'transform 5s';
+      newsContainer.style.transition = 'none';
       newsContainer.style.transform = 'translateY(0)';
-    }, 20);
+      newsContainer.appendChild(firstItem);
+    }, 2000);
   }
 
   setInterval(showSlide, 3000);
