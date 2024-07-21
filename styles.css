@@ -6,8 +6,7 @@ body {
 }
 
 .container {
-  width: 100%;
-  height: 100%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
 }
@@ -91,15 +90,16 @@ header nav {
 }
 
 .news-container {
-  display: flex;
-  flex-direction: column;
-  animation: scroll-up 10s linear infinite;
+  height: 350px; /* Ensure this is less than .recent-updates height */
+  overflow: hidden;
+  position: relative;
 }
 
 .news-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 10px 0;
+  white-space: nowrap;
 }
 
 @keyframes scroll-up {
