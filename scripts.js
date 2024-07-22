@@ -20,16 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
   function scrollNews() {
     const firstItem = newsContainer.firstElementChild;
     const itemHeight = firstItem.offsetHeight;
-    newsContainer.style.transition = 'transform 30s';
+    newsContainer.style.transition = 'transform 10s';
     newsContainer.style.transform = `translateY(-${itemHeight}px)`;
 
     setTimeout(() => {
       newsContainer.style.transition = 'none';
       newsContainer.style.transform = 'translateY(0)';
       newsContainer.appendChild(firstItem);
-    }, 2000);
+    }, 2000); // Transition duration
+
+    setTimeout(() => {
+      // Reset transition for smooth scrolling
+      newsContainer.style.transition = 'transform 10s';
+    }, 10000); // Delay before next scroll
   }
 
-  setInterval(showSlide, 3000);
-  setInterval(scrollNews, 4000); // Adjust the interval as needed
+  setInterval(showSlide, 10000);
+  setInterval(scrollNews, 10000); // Adjust the interval to include transition time and delay
 });
