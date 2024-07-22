@@ -38,8 +38,9 @@ header li {
 
 header .logo {
   float: left;
-  width: 50px;
-  height: 50px;
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between logo and header text */
 }
 
 header h1, header h2 {
@@ -55,19 +56,20 @@ header nav {
   width: 70%;
   float: left;
   position: relative;
+  margin-bottom: 20px; /* Space below hero section */
 }
 
 .hero .slider {
   position: relative;
-  width: 200%;
-  height: 300px; /* Fixed height for rectangular shape */
+  width: 100%;
+  height: 400px; /* Fixed height for rectangular shape */
   overflow: hidden;
 }
 
 .slides {
   display: flex;
   transition: transform 2s ease-in-out;
-  height: 90%; /* Ensure slides take full height of slider */
+  height: 100%; /* Ensure slides take full height of slider */
 }
 
 .slides img {
@@ -97,25 +99,19 @@ header nav {
 }
 
 .recent-updates {
-  width: 40%;
+  width: 30%;
   float: right;
   background: #fff;
-  padding: 10px;
+  padding: 20px;
   margin-top: 20px;
   overflow: hidden;
-  height: 400px;
+  height: 400px; /* Adjust height to fit content */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.recent-updates h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #002147;
+  position: relative; /* Make sure recent updates content does not overflow */
 }
 
 .news-container {
-  height: 350px; /* Ensure this is less than .recent-updates height */
+  height: 100%; /* Full height for proper overflow handling */
   overflow: hidden;
   position: relative;
 }
@@ -125,6 +121,7 @@ header nav {
   align-items: center;
   padding: 10px 0;
   white-space: nowrap;
+  margin-bottom: 10px; /* Space between news items */
 }
 
 @keyframes scroll-up {
