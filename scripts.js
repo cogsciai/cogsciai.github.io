@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
       newsContainer.style.transition = 'none';
       newsContainer.style.transform = 'translateY(0)';
       newsContainer.appendChild(firstItem);
-    }, 5000); // Transition duration
+    }, 2000); // Transition duration
   }
 
   function startScrollingNews() {
     scrollNews();
-    setInterval(scrollNews, 10000); // Adjust the interval to include transition time and delay
+    setInterval(scrollNews, 4000); // Adjust the interval to include transition time and delay
   }
 
   setInterval(nextSlide, 5000); // Change slides every 5 seconds
