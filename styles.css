@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: auto;
   overflow: hidden;
 }
@@ -56,13 +56,12 @@ header nav {
   width: 70%;
   float: left;
   position: relative;
-  margin-bottom: 20px; /* Space below hero section */
 }
 
 .hero .slider {
   position: relative;
   width: 100%;
-  height: 300px; /* Fixed height for rectangular shape */
+  height: 400px; /* Fixed height for rectangular shape */
   overflow: hidden;
 }
 
@@ -99,15 +98,22 @@ header nav {
 }
 
 .recent-updates {
-  width: 30%;
+  width: 28%; /* Adjust width as needed */
   float: right;
   background: #fff;
-  padding: 5px;
-  margin-top: 5px;
+  padding: 20px;
+  margin-top: 20px;
   overflow: hidden;
-  height: 300px; /* Adjust height to fit content */
+  height: 400px; /* Adjust height to fit content */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative; /* Make sure recent updates content does not overflow */
+}
+
+.recent-updates h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #002147;
 }
 
 .news-container {
