@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  width: 75%;
+  width: 80%;
   margin: auto;
   overflow: hidden;
 }
@@ -99,7 +99,7 @@ header nav {
 }
 
 .recent-updates {
-  width: 35%;
+  width: 45%;
   float: right;
   background: #fff;
   padding: 10px;
