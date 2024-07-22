@@ -102,7 +102,7 @@ header nav {
   float: right;
   background: #fff;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 2px;
   overflow: hidden;
   height: 400px; /* Adjust height to fit content */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
