@@ -98,22 +98,13 @@ header nav {
   right: 10px;
 }
 
-.recent-updates {
+.recent-updates-container {
   width: 30%;
   float: right;
-  background: #fff;
-  padding: 10px;
   margin-top: 0;
-  overflow: hidden;
-  height: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
-.recent-updates h2 {
+.recent-updates-container h2 {
   margin-top: 0;
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -121,12 +112,23 @@ header nav {
   font-size: 1.5em;
 }
 
-/* New rule added here to control the overflow and ensure it only shows content within the set height */
+.recent-updates {
+  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+  height: 350px; /* Adjust height as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .news-container {
   flex-grow: 1;
   overflow: hidden;
   position: relative;
-  height: 350px; /* Adjust the height as needed */
+  height: 100%;
 }
 
 .news-item {
@@ -135,7 +137,7 @@ header nav {
   padding: 10px 0;
   white-space: nowrap;
   margin-bottom: 10px;
-  animation: scroll-up 10s linear infinite;
+  animation: scroll-up 15s linear infinite; /* Adjusted animation duration */
 }
 
 @keyframes scroll-up {
@@ -213,7 +215,7 @@ footer address {
     padding: 10px 0;
   }
 
-  .hero, .recent-updates {
+  .hero, .recent-updates-container {
     width: 100%;
     float: none;
     margin-top: 20px;
