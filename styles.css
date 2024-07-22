@@ -39,7 +39,7 @@ header li {
 header .logo {
   float: left;
   width: 50px;
-  height: 70px;
+  height: 60px;
 }
 
 header h1, header h2 {
@@ -97,10 +97,10 @@ header nav {
 }
 
 .recent-updates {
-  width: 30%;
+  width: 40%;
   float: right;
   background: #fff;
-  padding: 20px;
+  padding: 10px;
   margin-top: 20px;
   overflow: hidden;
   height: 400px;
