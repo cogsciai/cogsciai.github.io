@@ -62,12 +62,14 @@ header nav {
   overflow: hidden;
 }
 
-.slides img {
-  width: 100%;
-  display: none;
+.slides {
+  display: flex;
+  transition: transform 2s ease-in-out;
 }
 
-.slides img.active {
+.slides img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
