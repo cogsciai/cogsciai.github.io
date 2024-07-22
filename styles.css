@@ -54,23 +54,46 @@ header nav {
 .hero {
   width: 70%;
   float: left;
+  position: relative;
 }
 
 .hero .slider {
   position: relative;
   width: 100%;
+  height: 300px; /* Fixed height for rectangular shape */
   overflow: hidden;
 }
 
 .slides {
   display: flex;
   transition: transform 2s ease-in-out;
+  height: 100%; /* Ensure slides take full height of slider */
 }
 
 .slides img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area without stretching */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
 }
 
 .recent-updates {
