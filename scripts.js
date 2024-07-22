@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.slides img');
   const newsContainer = document.querySelector('.news-container');
   const newsItems = Array.from(document.querySelectorAll('.news-item'));
-
-  // Clone news items to create a seamless scroll
+  
+  // Duplicate news items to create a seamless scroll
   newsItems.forEach(item => newsContainer.appendChild(item.cloneNode(true)));
 
   function showSlide() {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function scrollNews() {
     const firstItem = newsContainer.firstElementChild;
     const itemHeight = firstItem.offsetHeight;
-    newsContainer.style.transition = 'transform 10s';
+    newsContainer.style.transition = 'transform 2s';
     newsContainer.style.transform = `translateY(-${itemHeight}px)`;
 
     setTimeout(() => {
@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
       newsContainer.style.transform = 'translateY(0)';
       newsContainer.appendChild(firstItem);
     }, 2000); // Transition duration
-
-    setTimeout(() => {
-      // Reset transition for smooth scrolling
-      newsContainer.style.transition = 'transform 10s';
-    }, 10000); // Delay before next scroll
   }
 
-  setInterval(showSlide, 10000);
-  setInterval(scrollNews, 10000); // Adjust the interval to include transition time and delay
+  function startScrollingNews() {
+    scrollNews();
+    setInterval(scrollNews, 4000); // Adjust the interval to include transition time and delay
+  }
+
+  setInterval(showSlide, 3000);
+  setTimeout(startScrollingNews, 2000); // Initial delay before starting the news scroll
 });
