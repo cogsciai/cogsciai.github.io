@@ -60,7 +60,7 @@ header nav {
 
 .hero .slider {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 400px; /* Fixed height for rectangular shape */
   overflow: hidden;
 }
