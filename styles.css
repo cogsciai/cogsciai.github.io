@@ -33,14 +33,14 @@ header ul {
 
 header li {
   display: inline;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
 }
 
 header .logo {
   float: left;
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Space between logo and header text */
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
 }
 
 header h1, header h2 {
@@ -56,25 +56,26 @@ header nav {
   width: 70%;
   float: left;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .hero .slider {
   position: relative;
-  width: 80%;
-  height: 400px; /* Fixed height for rectangular shape */
+  width: 100%;
+  height: 400px;
   overflow: hidden;
 }
 
 .slides {
   display: flex;
   transition: transform 2s ease-in-out;
-  height: 100%; /* Ensure slides take full height of slider */
+  height: 100%;
 }
 
 .slides img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure images cover the area without stretching */
+  object-fit: cover;
 }
 
 .arrow {
@@ -98,26 +99,30 @@ header nav {
 }
 
 .recent-updates {
-  width: 28%; /* Adjust width as needed */
+  width: 28%;
   float: right;
   background: #fff;
-  padding: 20px;
-  margin-top: 2px;
+  padding: 10px;
+  margin-top: 0;
   overflow: hidden;
-  height: 400px; /* Adjust height to fit content */
+  height: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative; /* Make sure recent updates content does not overflow */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .recent-updates h2 {
   margin-top: 0;
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   border-bottom: 2px solid #002147;
+  font-size: 1.5em;
 }
 
 .news-container {
-  height: 100%; /* Full height for proper overflow handling */
+  flex-grow: 1;
   overflow: hidden;
   position: relative;
 }
@@ -127,7 +132,7 @@ header nav {
   align-items: center;
   padding: 10px 0;
   white-space: nowrap;
-  margin-bottom: 10px; /* Space between news items */
+  margin-bottom: 10px;
 }
 
 @keyframes scroll-up {
