@@ -140,6 +140,11 @@ header nav {
   animation: scroll-up 15s linear infinite; /* Adjusted animation duration */
 }
 
+.news-text {
+  color: red; /* Set news text color to red */
+}
+
+
 @keyframes scroll-up {
   0% {
     transform: translateY(100%);
@@ -185,6 +190,11 @@ footer {
 footer address {
   margin: 0;
   padding: 0;
+}
+
+/* New rule to change the email link color to red */
+footer a.footer-email {
+  color: red;
 }
 
 /* Media Queries for Responsive Design */
