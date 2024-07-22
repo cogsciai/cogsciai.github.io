@@ -121,11 +121,12 @@ header nav {
   font-size: 1.5em;
 }
 
+/* New rule added here to control the overflow and ensure it only shows content within the set height */
 .news-container {
   flex-grow: 1;
   overflow: hidden;
   position: relative;
-  margin-bottom: 10px;
+  height: 350px; /* Adjust the height as needed */
 }
 
 .news-item {
@@ -134,6 +135,7 @@ header nav {
   padding: 10px 0;
   white-space: nowrap;
   margin-bottom: 10px;
+  animation: scroll-up 10s linear infinite;
 }
 
 @keyframes scroll-up {
