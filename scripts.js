@@ -8,12 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   newsItems.forEach(item => newsContainer.appendChild(item.cloneNode(true)));
 
   function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
+    const sliderWidth = slides[0].clientWidth;
+    const slidesContainer = document.querySelector('.slides');
+    slidesContainer.style.transform = `translateX(${-index * sliderWidth}px)`;
     slideIndex = (index + 1) % slides.length;
   }
 
