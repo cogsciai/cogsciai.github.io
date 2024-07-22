@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.slides img');
   const newsContainer = document.querySelector('.news-container');
   const newsItems = Array.from(document.querySelectorAll('.news-item'));
-  
-  // Duplicate news items to create a seamless scroll
+
+  // Clone news items to create a seamless scroll
   newsItems.forEach(item => newsContainer.appendChild(item.cloneNode(true)));
 
   function showSlide() {
