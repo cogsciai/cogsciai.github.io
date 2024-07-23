@@ -107,6 +107,7 @@ header nav {
 .recent-updates-container h2 {
   margin-top: 0;
   margin-bottom: 10px;
+  padding-top: 10px;
   padding-bottom: 5px;
   border-bottom: 2px solid #002147;
   font-size: 1.5em;
